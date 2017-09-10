@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'SLPlaces';
   lugares:any = [
-    {nombre: 'pasteleria'},
-    {nombre: 'floreria'},
-    {nombre: 'veterinaria'}
+    {nombre: 'pasteleria', active: true},
+    {nombre: 'floreria', active: true},
+    {nombre: 'veterinaria', active: false}
   ]
 
   constructor() {
