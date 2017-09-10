@@ -7,12 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SLPlaces';
-  isEnabled = true;
+  isEnabled = false;
 
   constructor() {
     setTimeout(() =>{
-      this.isEnabled = false;
+      this.isEnabled = true;
     }, 3000 )
+  }
+
+  enviarAlerta (){
+    alert('Acabas de dar click')
   }
 
 }
