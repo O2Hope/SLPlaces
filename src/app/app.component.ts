@@ -7,22 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SLPlaces';
-  isEnabled = false;
-  nombre = '';
-  apellido = '';
-  completo = '';
+  lugares:any = [
+    {nombre: 'pasteleria'},
+    {nombre: 'floreria'},
+    {nombre: 'veterinaria'}
+  ]
 
   constructor() {
-    setTimeout(() =>{
-      this.isEnabled = true;
-    }, 3000 )
   }
 
-  enviarAlerta (){
-    alert('Acabas de dar click')
-  }
-
-  concatena(){
-    this.completo = `${this.nombre} ${this.apellido}`
-  }
 }
