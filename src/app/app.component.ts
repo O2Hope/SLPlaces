@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'SLPlaces';
   isEnabled = false;
+  nombre = '';
+  apellido = '';
+  completo = '';
 
   constructor() {
     setTimeout(() =>{
@@ -19,4 +22,7 @@ export class AppComponent {
     alert('Acabas de dar click')
   }
 
+  concatena(){
+    this.completo = `${this.nombre} ${this.apellido}`
+  }
 }
