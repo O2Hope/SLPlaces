@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'SLPlaces';
   lugares: any = [
-    {cercania: 1, distancia: 1, nombre: 'pasteleria', active: true},
-    {cercania: 2, distancia: 5, nombre: 'floreria', active: true},
-    {cercania: 3, distancia: 10, nombre: 'veterinaria', active: false}
+    {plan: 'pagado', cercania: 1, distancia: 1, nombre: 'pasteleria', active: true},
+    {plan: 'gratis', cercania: 2, distancia: 5, nombre: 'floreria', active: true},
+    {plan: 'gratis', cercania: 3, distancia: 10, nombre: 'veterinaria', active: false}
   ];
   lat = 22.1473734;
   lng = -101.0106106;
