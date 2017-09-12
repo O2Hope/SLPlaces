@@ -1,8 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <ul>
+
+
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+
+  <hr/>
+
   <ng-container *ngFor="let lugar of lugares">
+    <li *ngIf="lugar.active" >{{ lugar.nombre }}</li>
+  </ng-container>
 
-    <li *ngIf="lugar.active" >{{lugar.nombre}}</li>
+  <hr/>
 
-  </ng-container> 
+  <ng-container *ngFor="let persona of personas">
+    <li *ngIf="persona.edad > 17" >{{ persona.nombre }}</li>
+  </ng-container>
+
+
+
 </ul>
