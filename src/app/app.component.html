@@ -8,8 +8,8 @@
 
   <hr/>
 
-  <ng-container *ngFor="let lugar of lugares">
-    <li *ngIf="lugar.active" >{{ lugar.nombre }}</li>
+  <ng-container *ngFor="let lugar of lugares; let i = index">
+    <li [ngStyle]="{color: (lugar.active) ? 'black' : 'red' }" [ngClass]="{numero_par: (i + 1) % 2 !== 0}" >{{ lugar.nombre }}</li>
   </ng-container>
 
   <hr/>

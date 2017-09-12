@@ -2,3 +2,9 @@
 agm-map {
   height: 300px;
 }
+
+.numero_par {
+  background-color: brown;
+  color: white;
+
+}
