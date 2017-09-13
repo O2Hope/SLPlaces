@@ -3,7 +3,7 @@ import {Directive, ElementRef, Input, OnInit, Renderer2} from '@angular/core';
 @Directive({
   selector: '[appResaltar]'
 })
-export class ResaltarDirective implements OnInit{
+export class ResaltarDirective implements OnInit {
   constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
   @Input('appResaltar') plan = '';

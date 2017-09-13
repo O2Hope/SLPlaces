@@ -22,30 +22,4 @@
 </div><!-- /.container-fluid -->
 </nav>
 
-<!-- Map -->
-
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
-
-<!-- List of places -->
-
-<hr/>
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <h2>Cercanos</h2>
-      <ul class="list-group">
-        <ng-container *ngFor="let lugar of lugares; let i = index">
-            <li class="list-group-item">
-              {{ lugar.nombre }}
-            </li>
-        </ng-container>
-      </ul>
-    </div>
-
-    <div class="col-md-4">
-      <h2>Destacado</h2>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
