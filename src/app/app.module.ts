@@ -10,6 +10,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DetalleComponent } from './detalle/detalle.component';
 import { LugaresComponent } from './lugares/lugares.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import {LugaresService} from './services/lugares.service';
+
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 const appRoutes: Routes = [
   {path: '', component: LugaresComponent},
@@ -17,6 +24,14 @@ const appRoutes: Routes = [
   {path: 'detalle/:id', component: DetalleComponent},
   {path: 'contacto', component: ContactoComponent}
   ];
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyBzdDWVmA6SU7TCV0UJayJIj8_ibsk62BY',
+  authDomain: 'slplaces-1505233864890.firebaseapp.com',
+  databaseURL: 'https://slplaces-1505233864890.firebaseio.com',
+  storageBucket: 'slplaces-1505233864890.appspot.com',
+  messagingSenderId: '50322956746'
+};
 
 @NgModule({
   declarations: [
@@ -34,9 +49,12 @@ const appRoutes: Routes = [
       apiKey: 'AIzaSyBCSX6feGXC5McAF3n-lV1R2IBV-KXi8PA'
     }),
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [LugaresService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
